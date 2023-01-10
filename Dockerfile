@@ -46,9 +46,8 @@ WORKDIR /home/app/2050/src
 RUN ruby compile_template.rb
 
 # test
-WORKDIR /home/app/2050/util
-RUN chmod 777 docker_setup.sh
-RUN ./docker_setup.sh
+RUN chmod 777 /home/app/2050/util/docker_setup.sh
+RUN /home/app/2050/util/docker_setup.sh
 
 # Now need to build this image
 # e.g., docker build .
