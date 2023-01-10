@@ -5,7 +5,9 @@
 #
 # Use phusion/passenger-full as base image.
 # See https://github.com/phusion/passenger-docker for more information
-FROM phusion/passenger-ruby21:
+
+# FROM phusion/passenger-ruby21:
+FROM phusion/passenger-ruby27:
 MAINTAINER tom@counsell.org
 
 # Set correct environment variables.
@@ -18,7 +20,8 @@ CMD ["/sbin/my_init"]
 RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 # Make sure we are using Ruby 2.1
-RUN ruby-switch --set ruby2.1
+# RUN ruby-switch --set ruby2.1
+RUN ruby-switch --set ruby2.7
 
 # Remove the default Nginx configuration
 RUN rm -f /etc/nginx/sites-enabled/default
