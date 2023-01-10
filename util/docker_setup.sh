@@ -13,7 +13,7 @@ server {
 EndConf
 
 cp ngnix-configuration.conf /etc/nginx/sites-available/2050.conf
-ln -s /etc/nginx/sites-available/2050.conf /etc/nginx/sites-enabled/2050.conf
+ln -sf /etc/nginx/sites-available/2050.conf /etc/nginx/sites-enabled/2050.conf
 unlink /etc/nginx/sites-enabled/default
 nginx -t
 service nginx restart
