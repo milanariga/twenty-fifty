@@ -1,12 +1,12 @@
 #!/bin/bash
 
 # Create the server configuration file
-twentyfiftyserverroot=$(pwd)/public
+
 cat <<EndConf > ngnix-configuration.conf
 server {
   listen 8080 default_server;
   listen [::]:8080 default_server ipv6only=on;
-  root $twentyfiftyserverroot;
+  root /home/app/2050/public;
 
   passenger_enabled on;
 }
