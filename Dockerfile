@@ -39,6 +39,7 @@ RUN bundle
 
 # Compile the C code
 WORKDIR /home/app/2050/model
+RUN ruby translate_excel_into_c.rb
 RUN ruby compile_c_version_if_needed.rb
 
 # Precompile templates (can't do later becase filesystem may be readonly)
