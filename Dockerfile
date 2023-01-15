@@ -39,6 +39,8 @@ RUN bundle
 
 # Compile the C code
 WORKDIR /home/app/2050/model
+
+RUN update-ca-certificates
 RUN apt-get update
 RUN apt-get install zip
 RUN apt-get install unzip
