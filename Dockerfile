@@ -39,6 +39,9 @@ RUN bundle
 
 # Compile the C code
 WORKDIR /home/app/2050/model
+RUN apt-get update
+RUN apt-get install zip
+RUN apt-get install unzip
 RUN ruby translate_excel_into_c.rb
 RUN ruby compile_c_version_if_needed.rb
 
