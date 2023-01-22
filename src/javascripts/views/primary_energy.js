@@ -93,13 +93,13 @@ window.twentyfifty.views.primary_energy_chart = function() {
       .title("Final Energy Demand")
       .unit('TWh/yr')
       .css_for_label(css_for_labels)
-      .max_value(4000);
+      .max_value(25000);
 
     this.primary_energy_chart = timeSeriesStackedAreaChart()
       .title("Primary Energy Supply")
       .unit('TWh/yr')
       .css_for_label(css_for_labels)
-      .max_value(4000);
+      .max_value(20000);
 
     this.emissions_chart = timeSeriesStackedAreaChart()
       .title("Greenhouse Gas Emissions")
