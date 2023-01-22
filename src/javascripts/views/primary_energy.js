@@ -99,7 +99,7 @@ window.twentyfifty.views.primary_energy_chart = function() {
       .title("Primary Energy Supply")
       .unit('TWh/yr')
       .css_for_label(css_for_labels)
-      .max_value(100000);
+      .max_value(200000);
 
     this.emissions_chart = timeSeriesStackedAreaChart()
       .title("Greenhouse Gas Emissions")
